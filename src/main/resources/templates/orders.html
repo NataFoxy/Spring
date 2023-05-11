@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<link th:href="@{/css/styleorders.css}" rel="stylesheet">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<h1>Orders</h1>
+
+    <table>
+        <tbody>
+            <tr th:each = "orders: ${orders}">
+                <td th:text = "${order.orderId}"></td>
+                <td th:text = "${order.user}"></td>
+                <td th:text = "${order.title}"></td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+</html>
